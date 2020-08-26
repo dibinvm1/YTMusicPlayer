@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block app_content%}
+<h1>Convert and Play Youtube Mp3s</h1>
+
+<form action="{% url 'player'%}" method="POST" >
+{%  csrf_token %}
+<div class="form-group">
+    {{ form }}
+</div>
+<button type="submit" class="btn btn-primary">Play</button>
+</form>
+
+{%endblock%}
